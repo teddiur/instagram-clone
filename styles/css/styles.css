@@ -9,6 +9,13 @@ html {
   width: 100%;
 }
 
+.tab-bar .action-icon {
+  width: 24px;
+  height: auto;
+  cursor: pointer;
+  margin: 0 15px;
+}
+
 *,
 p {
   font-family: Arial;
@@ -18,13 +25,8 @@ body {
   max-width: 375px;
   margin: auto;
   background-color: #fafafa;
-}
-
-.tab-bar .action-icon {
-  width: 24px;
-  height: auto;
-  cursor: pointer;
-  margin: 0 15px;
+  height: 100vw;
+  position: relative;
 }
 
 .tab-bar {

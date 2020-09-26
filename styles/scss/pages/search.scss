@@ -1,0 +1,40 @@
+@import '../styles.scss';
+@import '../mixins.scss';
+
+main {
+    @include simple-flex(flex-start, center, column);
+    width: 100%;
+
+    .search-container {
+        @include simple-flex(space-between, center, row);
+        width: 100%;
+        padding: 16px 10px 0 8px;
+        box-sizing: border-box;
+    
+        .search-bar-container {
+            position: relative;
+    
+            .search-icon {
+                position: absolute;
+                width: 14px;
+                height: auto;
+                top: 11.3px;
+                left: 11.3px;
+            }
+
+            .search-input {
+                min-width: 327px;
+                height: 36px;
+                padding: 6px 6px 8px 34px;
+                background-color: #76768012;
+                border: none;
+                border-radius: 10px;
+            }
+        }
+
+        .qrcode-icon {
+            width: 20px;
+            height: auto;
+        }
+    }
+}
