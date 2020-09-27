@@ -83,5 +83,56 @@ main .search-container .qrcode-icon {
   width: 20px;
   height: auto;
 }
+main .query-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  margin: 9px 0 7px;
+  width: 100%;
+  position: sticky;
+  overflow-x: auto;
+}
+main .query-container::-webkit-scrollbar {
+  display: none;
+}
+@media (min-width: 500px) {
+  main .query-container {
+    /* Track */
+    /* Handle */
+  }
+  main .query-container::-webkit-scrollbar {
+    display: initial;
+    height: 5px;
+  }
+  main .query-container::-webkit-scrollbar-track {
+    background-color: #f2f2f2;
+  }
+  main .query-container::-webkit-scrollbar-thumb {
+    background: #c7c7c7;
+    border-radius: 5px;
+  }
+}
+main .query-container .query-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding: 8px 11px 7px;
+  margin: 0 6px;
+  border: 1px solid #3C3C4318;
+  border-radius: 6px;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+main .query-container .query-item img {
+  margin: 0 6px 0 0;
+}
+main .query-container .query-item p {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
 
 /*# sourceMappingURL=search.css.map */

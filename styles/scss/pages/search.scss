@@ -37,4 +37,54 @@ main {
             height: auto;
         }
     }
+
+    .query-container {
+        @include simple-flex(flex-start, center, row);
+        margin: 9px 0 7px;
+        width: 100%;
+        position: sticky;
+        overflow-x: auto;
+        
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        @media (min-width: 500px) {
+            &::-webkit-scrollbar {
+                display: initial;
+                height: 5px;
+            }
+        
+            /* Track */
+            &::-webkit-scrollbar-track {
+            background-color: $background-secondary;
+            }
+        
+            /* Handle */
+            &::-webkit-scrollbar-thumb {
+            background: #c7c7c7;
+            border-radius: 5px;
+            }
+        }
+
+        .query-item {
+            @include simple-flex(space-between, center, row);
+            padding: 8px 11px 7px;
+            margin: 0 6px;
+            border: 1px solid #3C3C4318;
+            border-radius: 6px;
+            background-color: #fff;
+            box-sizing: border-box;
+
+            img {
+                margin: 0 6px 0 0;
+            }
+            p {
+                display: inline-block;
+                font-size: 14px;
+                font-weight: 600;
+                letter-spacing: 1px;
+            }
+        }
+    }
 }
