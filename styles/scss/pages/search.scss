@@ -1,90 +1,111 @@
 @import '../styles.scss';
 @import '../mixins.scss';
 
-main {
-    @include simple-flex(flex-start, center, column);
+.search-container {
+    @include simple-flex(space-between, center, row);
     width: 100%;
+    padding: 16px 10px 0 8px;
+    box-sizing: border-box;
 
-    .search-container {
-        @include simple-flex(space-between, center, row);
-        width: 100%;
-        padding: 16px 10px 0 8px;
-        box-sizing: border-box;
-    
-        .search-bar-container {
-            position: relative;
-    
-            .search-icon {
-                position: absolute;
-                width: 14px;
-                height: auto;
-                top: 11.3px;
-                left: 11.3px;
-            }
+    .search-bar-container {
+        position: relative;
 
-            .search-input {
-                min-width: 327px;
-                height: 36px;
-                padding: 6px 6px 8px 34px;
-                background-color: #76768012;
-                border: none;
-                border-radius: 10px;
-            }
+        .search-icon {
+            position: absolute;
+            width: 14px;
+            height: auto;
+            top: 11.3px;
+            left: 11.3px;
         }
 
-        .qrcode-icon {
-            width: 20px;
-            height: auto;
+        .search-input {
+            min-width: 327px;
+            height: 36px;
+            padding: 8px 6px 8px 34px;
+            background-color: #76768012;
+            border: none;
+            border-radius: 10px;
+            outline: none;
         }
     }
 
-    .query-container {
-        @include simple-flex(flex-start, center, row);
-        margin: 9px 0 7px;
-        width: 100%;
-        position: sticky;
-        overflow-x: auto;
-        
+    .qrcode-icon {
+        width: 20px;
+        height: auto;
+        margin-left: 10px
+    }
+}
+
+.query-container {
+    @include simple-flex(flex-start, center, row);
+    margin: 9px 0 7px;
+    width: 100%;
+    position: sticky;
+    overflow-x: auto;
+    background-color: $background-primary;
+    
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    @media (min-width: 500px) {
         &::-webkit-scrollbar {
-            display: none;
+            display: initial;
+            height: 5px;
         }
-
-        @media (min-width: 500px) {
-            &::-webkit-scrollbar {
-                display: initial;
-                height: 5px;
-            }
-        
-            /* Track */
-            &::-webkit-scrollbar-track {
-            background-color: $background-secondary;
-            }
-        
-            /* Handle */
-            &::-webkit-scrollbar-thumb {
-            background: #c7c7c7;
-            border-radius: 5px;
-            }
+    
+        /* Track */
+        &::-webkit-scrollbar-track {
+        background-color: $background-secondary;
         }
+    
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+        background: #c7c7c7;
+        border-radius: 5px;
+        }
+    }
 
-        .query-item {
-            @include simple-flex(space-between, center, row);
-            padding: 8px 11px 7px;
-            margin: 0 6px;
-            border: 1px solid #3C3C4318;
-            border-radius: 6px;
-            background-color: #fff;
+    .query-item {
+        @include simple-flex(space-between, center, row);
+        padding: 8px 11px 7px;
+        margin: 0 6px;
+        border: 1px solid #3C3C4318;
+        border-radius: 6px;
+        background-color: #fff;
+        box-sizing: border-box;
+
+        img {
+            margin: 0 6px 0 0;
+        }
+        p {
+            display: inline-block;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+    }
+}
+main {
+    // @include simple-flex(flex-start, center, column);
+    width: 100%;
+
+
+    .suggestions-container {
+        @include simple-flex(flex-start, flex-start, row);
+        flex-wrap: wrap;
+        width: 100%;
+        
+        .post-img {
+            margin: 0.5px;
             box-sizing: border-box;
+            width: calc(33.33% - 1px);
+            height: auto;
+            object-fit: cover;
+        }
 
-            img {
-                margin: 0 6px 0 0;
-            }
-            p {
-                display: inline-block;
-                font-size: 14px;
-                font-weight: 600;
-                letter-spacing: 1px;
-            }
+        .post-img:nth-child(3n) {
+            padding-left: 0;
         }
     }
 }
