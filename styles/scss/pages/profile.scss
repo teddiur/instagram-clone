@@ -1,0 +1,28 @@
+@import '../styles.scss';
+
+.user-info {
+
+    .account-alt {
+    
+        .user {
+            @include simple-flex(center, center, row);
+            padding: 12px 0;
+            
+            .lock-icon {
+                width: 9px;
+                height: 12px;
+            }
+
+            .arrow-icon {
+                width: 11px;
+                height: 6px;
+            }
+
+            p {
+                padding: 0 6px;
+                font-size: 16px;
+                font-weight: 600;
+            }
+        }
+    }
+}
