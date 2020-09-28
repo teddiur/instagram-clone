@@ -90,12 +90,93 @@ main .time-section header {
   font-weight: 600;
   padding: 13px 0;
 }
-main .time-section .like-new {
+main .like-new {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-direction: row;
   padding: 8px 0;
+}
+main .like-new .like-author-container {
+  position: relative;
+  width: 44px;
+}
+main .like-new .like-author-container .like-author {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+main .like-new .like-author-container .multiple-authors {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+main .like-new .like-author-container .multiple-authors:last-child {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  border: 1px solid #FFFFFF;
+}
+main .like-new .like-message {
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: -0.07px;
+  color: #262626;
+  padding-left: 12px;
+  max-width: 185px;
+}
+main .like-new .like-message .author-name {
+  font-weight: 600;
+}
+main .like-new .like-message .time {
+  color: #00000040;
+}
+main .like-new .like-message .user-link {
+  color: #154574;
+}
+main .like-new .liked-img, main .like-new .message-box, main .like-new .follow-box {
+  width: 44px;
+  height: auto;
+  object-fit: cover;
+  margin-left: auto;
+}
+main .like-new .message-box, main .like-new .follow-box {
+  width: initial;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border: 1px solid #3C3C4318;
+  border-radius: 4px;
+  min-width: 90px;
+  min-height: 28px;
+  box-sizing: border-box;
+  text-align: center;
+}
+main .like-new .follow-box {
+  background-color: #3797ef;
+  color: #fff;
+}
+
+main .time-section .like-news .reaction {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  padding: 5px 0 13px 56px;
+}
+main .time-section .like-news .reaction .like-icon {
+  width: 12px;
+  height: 10px;
+}
+main .time-section .like-news .reaction p {
+  font-size: 13px;
+  color: #00000040;
+  font-weight: 600;
+  padding-left: 14px;
+}
+
+#like-icon {
+  fill: #262626;
 }
 
 /*# sourceMappingURL=likes.css.map */

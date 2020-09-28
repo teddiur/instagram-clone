@@ -225,4 +225,8 @@ main .feed-container .card-post .post-infos .post-caption .author-name {
   font-weight: 600;
 }
 
+#home-icon path {
+  fill: #262626;
+}
+
 /*# sourceMappingURL=home.css.map */
