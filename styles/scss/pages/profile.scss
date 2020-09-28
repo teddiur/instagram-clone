@@ -1,5 +1,50 @@
 @import '../styles.scss';
 
+#toggle {
+    display: none;
+
+    &:checked ~ main {
+        transform: translateX(-$side-menu-size);
+    }
+
+    &:checked ~ .side-menu {
+        transform: translateX(-$side-menu-size);
+        visibility: visible;
+    }
+
+}
+
+.side-menu {
+    position: absolute;
+    left: 100%;
+    height: 100%;
+    width: $side-menu-size;
+    background-color: #fff;
+    visibility: hidden;
+    box-shadow: -0.5px 0 0 0 $shadow-color;
+
+    .toggle {
+        position: relative;
+        top: 0;
+        left: 0;
+        
+        &-side-menu {
+            position: absolute;
+            left: -18px;
+            top: 12px;
+            width: 21px;
+            height: 18px;
+            z-index: 3;
+            visibility: visible;
+        }
+    }
+
+}
+
+main {
+    overflow: hidden;
+}
+
 .user-info {
     padding: 0 11px;
 
@@ -97,7 +142,7 @@
 }
 
 .menu-alt {
-    box-shadow: 0 -0.5px 0px 0px #A6A6AA;
+    box-shadow: 0 -0.5px 0px 0px $shadow-color;
     width: 100%;
     @include simple-flex(flex-start, center, row);
     
@@ -114,6 +159,26 @@
 
         &.selected {
             box-shadow: 0 1px 0px 0px $text-color;
+        }
+    }
+}
+
+.post-imgs {
+    @include simple-flex(flex-start, center, row);
+    flex-wrap: wrap;
+
+    .post-img {
+        margin: 0.5px;
+        box-sizing: border-box;
+        width: calc(33.33% - 1px);
+        height: auto;
+
+        &:nth-child(3n) {
+            margin-left: 0;
+        }
+
+        &:nth-child(3n+1) {
+            margin-right: 0;
         }
     }
 }
