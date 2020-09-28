@@ -1,6 +1,7 @@
 @import '../styles.scss';
 
 .user-info {
+    padding: 0 11px;
 
     .account-alt {
     
@@ -22,6 +23,74 @@
                 padding: 0 6px;
                 font-size: 16px;
                 font-weight: 600;
+            }
+        }
+    }
+
+    .user-stats {
+        @include simple-flex(space-between, center, row);
+        padding-bottom: 12px; 
+
+        .user-icon {
+            @include box-round(86px);
+            padding: 4px;
+            border: 1px solid $border-color;
+        }
+
+        > * {
+            @include simple-flex(center, center, column);
+        }
+
+        p {
+            @include text-format(13px, 400);
+        }
+
+        .stats {
+            @include text-format(16px, 600);
+        }
+    }
+
+    .description {
+        padding-bottom: 15px;
+
+        p {
+            @include text-format(12px, 400);
+        }
+
+        .user-name {
+            @include text-format(12px, 600);
+        }
+        
+        .user-link {
+            color: $user-link-color;
+        }
+    }
+
+    .edit {
+        width: 100%;
+        padding: 6px 0;
+        margin-bottom: 16px;
+        background-color: #fff;
+        border: 1px solid $text-color-faded;
+        border-radius: 6px;
+
+        .buttom-text {
+            @include text-format(13px, 600);
+            text-align: center;
+            letter-spacing: -0.1px;
+        }
+    }
+
+    .stories-container {
+
+        .story-img {
+            padding: 3px;
+            border: 1px solid $border-color;
+
+            &.new {
+                width: 18px;
+                height: 18px;
+                padding: 23px;
             }
         }
     }
