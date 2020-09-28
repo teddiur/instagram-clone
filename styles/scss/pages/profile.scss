@@ -60,7 +60,7 @@
         .user-name {
             @include text-format(12px, 600);
         }
-        
+
         .user-link {
             color: $user-link-color;
         }
@@ -92,6 +92,28 @@
                 height: 18px;
                 padding: 23px;
             }
+        }
+    }
+}
+
+.menu-alt {
+    box-shadow: 0 -0.5px 0px 0px #A6A6AA;
+    width: 100%;
+    @include simple-flex(flex-start, center, row);
+    
+    .menu-container {
+        @include simple-flex(center, center);
+        width: 50%;
+        padding: 10px 0;
+        margin-bottom: 1px;
+    
+        .menu-icon {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        &.selected {
+            box-shadow: 0 1px 0px 0px $text-color;
         }
     }
 }

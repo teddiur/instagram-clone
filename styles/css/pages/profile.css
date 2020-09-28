@@ -184,4 +184,29 @@ body {
   padding: 23px;
 }
 
+.menu-alt {
+  box-shadow: 0 -0.5px 0px 0px #A6A6AA;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
+.menu-alt .menu-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 50%;
+  padding: 10px 0;
+  margin-bottom: 1px;
+}
+.menu-alt .menu-container .menu-icon {
+  margin-left: auto;
+  margin-right: auto;
+}
+.menu-alt .menu-container.selected {
+  box-shadow: 0 1px 0px 0px #262626;
+}
+
 /*# sourceMappingURL=profile.css.map */
