@@ -155,6 +155,6 @@ main {
   }
 }
 
-#home-icon path {
-  fill: $text-color;
+#home-icon {
+  @extend %selected-icon
 }

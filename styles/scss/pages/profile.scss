@@ -51,32 +51,38 @@ main {
     overflow: hidden;
 }
 
-.user-info {
-    padding: 0 11px;
+.account-alt {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: $background-primary;
 
-    .account-alt {
-    
-        .user {
-            @include simple-flex(center, center, row);
-            padding: 12px 0;
-            
-            .lock-icon {
-                width: 9px;
-                height: 12px;
-            }
+    .user {
+        @include simple-flex(center, center, row);
+        padding: 12px 0;
+        
+        .lock-icon {
+            width: 9px;
+            height: 12px;
+        }
 
-            .arrow-icon {
-                width: 11px;
-                height: 6px;
-            }
+        .arrow-icon {
+            width: 11px;
+            height: 6px;
+        }
 
-            p {
-                padding: 0 6px;
-                font-size: 16px;
-                font-weight: 600;
-            }
+        p {
+            padding: 0 6px;
+            font-size: 16px;
+            font-weight: 600;
         }
     }
+}
+
+.user-info {
+    padding: 0 11px;
+    // position: relative;
+
 
     .user-stats {
         @include simple-flex(space-between, center, row);
@@ -148,9 +154,14 @@ main {
 }
 
 .menu-alt {
-    box-shadow: 0 -0.5px 0px 0px $shadow-color;
-    width: 100%;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 42.5px;
     @include simple-flex(flex-start, center, row);
+    width: 100%;
+    background-color: $background-primary;
+    box-shadow: 0 -0.5px 0px 0px $shadow-color;
+    margin-top: 0.5px;
     
     .menu-container {
         @include simple-flex(center, center);

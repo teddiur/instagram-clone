@@ -146,5 +146,6 @@ main {
 }
 
 #like-icon {
-    fill: $text-color;
+    @extend %selected-icon
 }
+
