@@ -100,15 +100,21 @@ body {
   transform: translateX(-251px);
   visibility: visible;
 }
+#toggle:checked ~ .side-menu .toggle-side-menu {
+  left: -39px;
+}
 
 .side-menu {
-  position: absolute;
-  left: 100%;
+  position: fixed;
+  top: 0;
+  left: calc(50% + 375px/2);
   height: 100%;
   width: 251px;
   background-color: #fff;
   visibility: hidden;
   box-shadow: -0.5px 0 0 0 #A6A6AA;
+  z-index: 1;
+  transform: translateX(0);
 }
 .side-menu .toggle {
   position: relative;
@@ -121,7 +127,6 @@ body {
   top: 12px;
   width: 21px;
   height: 18px;
-  z-index: 3;
   visibility: visible;
 }
 
