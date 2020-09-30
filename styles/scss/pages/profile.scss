@@ -8,44 +8,51 @@
     }
 
     &:checked ~ .side-menu {
-        transform: translateX(-$side-menu-size);
-        visibility: visible;
-
-        .toggle-side-menu {
-            left: -39px;
-        }
+        display: initial;
     }
-
 }
 
 .side-menu {
-    position: absolute;
+    position: fixed;
     top: 0;
-    left: calc(50% + 375px/2);
+    right: 0;
     height: 100%;
     width: $side-menu-size;
     background-color: #fff;
-    visibility: hidden;
     box-shadow: -0.5px 0 0 0 $shadow-color;
     z-index: 1;
     transform: translateX(0);
+    display: none;
+    padding: 18px 16px;
+    box-sizing: border-box;
 
-    .toggle {
-        position: relative;
-        top: 0;
-        left: 0;
-        
-        &-side-menu {
-            position: absolute;
-            left: -18px;
-            top: 12px;
-            width: 21px;
-            height: 18px;
-            visibility: visible;
-        }
+    .user-name {
+        @include text-format(15px);
+        margin-bottom: 13px;
     }
 
-}
+    .menu-options {
+        @include simple-flex(flex-start, flex-start, column);
+        height: 100%;
+
+        .menu-option {
+            @include simple-flex(flex-start, center, row);
+            @extend .user-name;
+            margin-top: 13px;
+
+            img {
+                width: 23px;
+                height: auto;
+                margin-right: 13px;
+            }
+
+            &:last-child {
+                margin-top: auto;
+                margin-bottom: 24px;
+            }
+        }
+    }
+}  
 
 main {
     overflow: hidden;
@@ -77,6 +84,12 @@ main {
             font-size: 16px;
             font-weight: 600;
         }
+    }
+    
+    .toggle-side-menu {
+        position: absolute;
+        right: 18px;
+        top: 12px;
     }
 }
 
