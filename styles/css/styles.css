@@ -22,8 +22,6 @@ p {
 }
 
 body {
-  max-width: 375px;
-  margin: auto;
   background-color: #fafafa;
   height: 100vw;
   position: relative;
@@ -43,6 +41,11 @@ body {
   fill-opacity: 0;
   stroke-width: 1.5px;
   stroke: #262626;
+}
+@media (min-width: 768px) {
+  .tab-bar {
+    display: none;
+  }
 }
 .tab-bar .action-icon {
   width: 22px;

@@ -9,8 +9,6 @@ p {
 }
 
 body {
-  max-width: 375px;
-  margin: auto;
   background-color: $background-primary;
   height: 100vw;
   position: relative;
@@ -27,6 +25,10 @@ body {
   fill-opacity: 0;
   stroke-width: 1.5px;
   stroke: $text-color;
+
+  @media ($desktop-breakpoint) {
+    display: none;
+  }
 
   .action-icon {
     @extend %action-icons;

@@ -22,8 +22,6 @@ p {
 }
 
 body {
-  max-width: 375px;
-  margin: auto;
   background-color: #fafafa;
   height: 100vw;
   position: relative;
@@ -43,6 +41,11 @@ body {
   fill-opacity: 0;
   stroke-width: 1.5px;
   stroke: #262626;
+}
+@media (min-width: 768px) {
+  .tab-bar {
+    display: none;
+  }
 }
 .tab-bar .action-icon {
   width: 22px;
@@ -108,7 +111,7 @@ body {
 }
 
 .side-menu {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: calc(50% + 375px/2);
   height: 100%;
@@ -135,6 +138,7 @@ body {
 
 main {
   overflow: hidden;
+  position: relative;
 }
 
 .account-alt {
